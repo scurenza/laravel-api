@@ -1,6 +1,8 @@
 <?php
 
+
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\TypeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -30,3 +32,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('projects', [ProjectController::class, 'index']);
+Route::get('projects/{slug}', [ProjectController::class, 'show']);
+Route::get('types', [TypeController::class, 'index']);
